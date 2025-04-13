@@ -1,0 +1,65 @@
+.answers {
+    padding-top: 20px;
+    padding-bottom: 12px;
+}
+
+.answers-pre-title {
+    font-size: 20px;
+    line-height: 24px;
+    color: #DCDCF3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.answers-pre-title img {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.answers-pre-title span {
+    font-size: 20px;
+    line-height: 24px;
+    color: #6933DC;
+}
+
+.answers-title {
+    margin-bottom: 10px;
+}
+
+.answers-executor {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 60px;
+}
+
+.answers-executor span {
+    font-family: "Museo Sans Cyrl Bold", sans-serif;
+    color: #6933DC;
+}
+
+.answers-question {
+    margin-bottom: 60px;
+}
+
+.answers-question-title {
+    font-size: 36px;
+    line-height: 43px;
+    font-family: "Museo Sans Cyrl Bold", sans-serif;
+}
+
+.answers-question-title span {
+    color: #6933DC;
+}
+
+.answers-question-options {
+    margin-top: 58px;
+}
+
+.answers-question-option {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
