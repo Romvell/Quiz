@@ -12,7 +12,7 @@ export class CustomHttp {
         };
         let token = localStorage.getItem(Auth.accessTokenKey);
         if (token) {
-            params.headers['x-access-tokens'] = token;
+            params.headers['x-access-token'] = token;
         }
 
         if (body) {
@@ -20,7 +20,7 @@ export class CustomHttp {
         }
 
         const response = await fetch(url, params);
-console.log(response.status);
+
         if (response.status < 200 || response.status >= 300) {
             if (response.status === 401) {
                 const result = await Auth.processUnauthorizedResponse();

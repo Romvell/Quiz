@@ -6,7 +6,7 @@ export class Choice {
 
     constructor() {
         this.quizzes = [];
-        //this.routeParams = UrlManager.getQueryParams();
+        this.routeParams = UrlManager.getQueryParams();
         this.init();
     }
 
@@ -21,8 +21,6 @@ export class Choice {
 
                 this.quizzes = result;
                 this.processQuizzes();
-            } else {
-                location.href = '#/';
             }
         } catch (error) {
             console.log(error);
