@@ -2,13 +2,18 @@ import {CustomHttp} from "../services/custom-http.js";
 import {Auth} from "../services/auth.js";
 import config from "../../config/config.js";
 
-
 export class Form {
 
     constructor(page) {
         this.agreeElement = null;
         this.processElement = null;
         this.page = page;
+
+        const accessToken = localStorage.getItem(Auth.accessTokenKey);
+        if (accessToken) {
+            location.href = '#/choice';
+            return;
+        }
 
         this.fields = [
             {
@@ -122,6 +127,10 @@ export class Form {
                     }
 
                     Auth.setTokens(result.accessToken, result.refreshToken);
+                    Auth.setUserInfo({
+                        fullName: result.fullName,
+                        userId: result.userId
+                    })
                     location.href = '#/choice';
                 }
             } catch (error) {
